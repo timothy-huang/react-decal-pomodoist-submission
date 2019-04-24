@@ -1,0 +1,90 @@
+.todo-item-container {
+  background-color: white;
+  color: #3A3131;
+  padding: 1.5em 0.8em;
+  display:flex;
+  justify-content: space-between;
+  min-height: 27px;
+}
+
+.todo-item-container-left {
+  display: flex;
+}
+
+.todo-item-complete-button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+/* bad for a11y but looks better 🤷‍ */
+/* good fix: https://medium.freecodecamp.org/how-to-make-your-fancy-svg-button-accessible-83c9172c3c15 */
+.todo-item-complete-button:focus {
+  outline: 0;
+}
+
+.todo-item-circle {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.todo-item-circle-empty {
+  box-sizing: border-box;
+  border: 2px solid #A2ADC1;
+}
+
+.todo-item-circle-empty:hover {
+  background: #a2adc12e;
+}
+
+.todo-item-circle-check {
+  background: #47D80C;
+  color: white;
+
+  /*
+    center children vertically and horizontally
+    https://stackoverflow.com/questions/25832340/css-flexbox-vertically-horizontally-center-image-without-explicitely-defining-pa
+  */
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+.todo-item-circle-check > svg {
+  width: 15px;
+  height: 15px;
+}
+
+.todo-item-description {
+  margin-bottom: 8px;
+}
+
+.todo-item-start-session-button {
+  color: #A2ADC1;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.todo-item-start-session-button > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.todo-item-start-session-button:hover > svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* bad for a11y but looks better 🤷‍ */
+/* good fix: https://medium.freecodecamp.org/how-to-make-your-fancy-svg-button-accessible-83c9172c3c15 */
+.todo-item-start-session-button:focus {
+  outline: 0;
+}
+
+.todo-item-container:hover .todo-item-start-session-button {
+  display: block;
+}

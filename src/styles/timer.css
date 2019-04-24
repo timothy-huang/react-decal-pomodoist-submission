@@ -1,0 +1,44 @@
+.timer-container {
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  padding: 1em 1em;
+  display: flex;
+  text-align: center;
+}
+
+.timer-container > div {
+  flex-grow: 1;
+  width: 33%;
+}
+
+.timer-work {
+  background: linear-gradient(-180deg, #5AC5FF 0%, #88B0FF 100%);
+}
+
+.timer-break {
+  background-image: linear-gradient(-180deg, #5EEDAA 3%, #50c78f 100%);
+}
+
+.timer-button {
+  border: 0;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.timer-button > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.timer-button > svg:hover {
+  width: 25px;
+  height: 25px;
+}
+
+/* bad for a11y but looks better 🤷‍ */
+/* good fix: https://medium.freecodecamp.org/how-to-make-your-fancy-svg-button-accessible-83c9172c3c15 */
+.timer-button:focus {
+  outline: 0;
+}

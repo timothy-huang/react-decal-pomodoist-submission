@@ -1,0 +1,12 @@
+.sessions-completed-container {
+  display:flex;
+  flex-direction:row;
+}
+
+.sessions-completed-line {
+  background: #D6D6D6;
+  width: 14px;
+  height: 3px;
+  border-radius: 1px;
+  margin-left: 3px;
+}

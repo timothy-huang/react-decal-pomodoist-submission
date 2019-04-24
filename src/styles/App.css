@@ -1,0 +1,77 @@
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1.1em;
+}
+
+header {
+  margin-bottom: 0.9em;
+  display: flex;
+}
+
+.heading {
+  font-size: 2.6em;
+  font-weight: 800;
+  flex-grow: 70;
+}
+
+.clear-button {
+  color: grey;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  margin-right: 0.2em;
+  /*
+  center children vertically and horizontally
+  https://stackoverflow.com/questions/25832340/css-flexbox-vertically-horizontally-center-image-without-explicitely-defining-pa
+  */
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+
+}
+
+/* bad for a11y but looks better 🤷‍ */
+/* good fix: https://medium.freecodecamp.org/how-to-make-your-fancy-svg-button-accessible-83c9172c3c15 */
+.clear-button:focus {
+  outline: 0;
+}
+
+.clear-button:hover > svg {
+  width: 31px;
+  height: 31px;
+}
+
+.clear-button > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.card {
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 4px 8px;
+  transition: all 0.2s ease-out 0s;
+  margin-bottom: 1em;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 6px 20px;
+}
+
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-state-container > svg {
+  margin: auto;
+  flex-basis: 20em;
+}
+
+.empty-state-text {
+  text-align: center;
+  font-size: 1.2em;
+}
